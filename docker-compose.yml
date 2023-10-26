@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  node:
+    tty: true
+    build: ./LINE/
+    volumes:
+      - ./LINE/:/usr/src/LINE
+    # command: sh -c 'cd LIFF && yarn dev'
+    ports:
+      - '3000:3000'
