@@ -6,6 +6,6 @@ services:
     build: ./LINE/
     volumes:
       - ./LINE/:/usr/src/LINE
-    # command: sh -c 'cd LIFF && yarn dev'
+    # command: sh -c 'yarn add @line/liff && cd test1 && yarn dev'
     ports:
       - '3000:3000'

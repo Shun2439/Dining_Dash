@@ -1,20 +1,18 @@
 # Dining_Dash
 
-## 参考
+食堂の予約システムをつくりたい。
 
-[liff doc](https://developers.line.biz/ja/docs/liff/cli-tool-create-liff-app/#start-the-liff-app-on-the-localhost)
+試しながらなのでごちゃごちゃ。
 
 ## note
 
 ### 気になること
 
-`<project name>`はなぜか"Dining_Dash"にできなかった
+- `<project name>`はなぜか"Dining_Dash"にできなかった
 
-`docker exec`したときに"@line/create-liff-app"をインストールするか問われたのでDockerfile等を見直す必要がある。
+- `docker exec`したときに"@line/create-liff-app"をインストールするか問われたのでDockerfile等を見直す必要がある
 
-なぜか"localhost:3000"にアクセスできなかった
-
-まだいちいちコンテナに入って`yarn dev`してるから改善したい。
+- まだいちいちコンテナに入って`yarn dev`してるから改善したい。
 
 ### コマンドたち
 
@@ -30,9 +28,5 @@ docker-compose up -d --build
 #-t:template
 #--ts:typescript
 
-docker exec -it <container id> npx @line/create-liff-app <project name> -t nextjs -l <liff id> --ts --yarn
+# docker exec -it <container id> npx @line/create-liff-app <project name> -t nextjs -l <liff id> --ts --yarn
 ```
-
-### ディレクトリ構成
-
-書く
