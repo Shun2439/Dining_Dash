@@ -1,39 +1,11 @@
-import 'dart:ui';
-
-import 'package:dining_dash/settings.dart';
+import 'package:dining_dash/main.dart';
 import 'package:dining_dash/start.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'dining_dash',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'dining_dash'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
+    // TODO: implement build
     return Scaffold(
       body: Center(
         child: Column(
@@ -44,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 175,
               height: 125,
               child: ElevatedButton(
-                child: const Text('ログイン'),
+                child: const Text('メインページ'),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green,
                   onPrimary: Colors.white,
