@@ -1,7 +1,9 @@
 import 'package:dining_dash/start.dart';
 import 'package:flutter/material.dart';
+import 'package:sqflite/sqflite.dart';
 
 class Order extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -13,7 +15,7 @@ class Order extends StatelessWidget {
             //ボタン
             new SizedBox(
               width: 175,
-              height: 125,
+              height: 75,
               child: ElevatedButton(
                 child: const Text('メインページ'),
                 style: ElevatedButton.styleFrom(

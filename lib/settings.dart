@@ -14,7 +14,7 @@ class Settings extends StatelessWidget {
             //ボタン
             new SizedBox(
               width: 175,
-              height: 125,
+              height: 75,
               child: ElevatedButton(
                 child: const Text('メインページ'),
                 style: ElevatedButton.styleFrom(

@@ -14,7 +14,7 @@ class Start extends StatelessWidget {
             //ボタン
             new SizedBox(
               width: 175,
-              height: 125,
+              height: 75,
               child: ElevatedButton(
                 child: const Text('設定'),
                 style: ElevatedButton.styleFrom(
@@ -32,7 +32,7 @@ class Start extends StatelessWidget {
             ),
             new SizedBox(
               width: 175,
-              height: 125,
+              height: 75,
               child: ElevatedButton(
                 child: const Text('注文'),
                 style: ElevatedButton.styleFrom(
