@@ -1,36 +1,80 @@
-import 'package:dining_dash/start.dart';
 import 'package:flutter/material.dart';
-import 'package:sqflite/sqflite.dart';
 
 class Order extends StatelessWidget {
+  const Order({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
+      appBar: AppBar(title: const Text("オーダー")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const Spacer(flex: 3),
+            RichText(
+              text: const TextSpan(
+                style: TextStyle(color: Colors.blue),
+                children: <TextSpan>[
+                  TextSpan(
+                      text: '本日のメニュー',
+                      style: TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                          shadows: <Shadow>[
+                            Shadow(
+                              offset: Offset(5.0, 5.0),
+                              blurRadius: 3.0,
+                              color: Color.fromARGB(47, 90, 83, 83),
+                            )
+                          ])),
+                ],
+              ),
+            ),
+            const Spacer(flex: 2),
             //ボタン
-            new SizedBox(
+            SizedBox(
               width: 175,
               height: 75,
               child: ElevatedButton(
-                child: const Text('メインページ'),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                  onPrimary: Colors.white,
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.blue,
                   elevation: 16,
                 ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Start()),
-                  );
-                },
+                onPressed: () {},
+                child: const Text('メインページ'),
               ),
             ),
+            const Spacer(),
+            SizedBox(
+              width: 175,
+              height: 75,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.blue,
+                  elevation: 16,
+                ),
+                onPressed: () {},
+                child: const Text('メインページ'),
+              ),
+            ),
+            const Spacer(),
+            SizedBox(
+              width: 175,
+              height: 75,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.blue,
+                  elevation: 16,
+                ),
+                onPressed: () {},
+                child: const Text('メインページ'),
+              ),
+            ),
+            const Spacer(flex: 5),
           ],
         ),
       ),

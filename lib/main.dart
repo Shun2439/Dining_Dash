@@ -1,9 +1,5 @@
-import 'dart:ui';
-
-import 'package:dining_dash/settings.dart';
 import 'package:dining_dash/start.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,33 +29,57 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const Spacer(),
+            RichText(
+              text: const TextSpan(
+                style: TextStyle(color: Colors.blue),
+                children: <TextSpan>[
+                  TextSpan(
+                      text: 'Dining Dash',
+                      style: TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                          shadows: <Shadow>[
+                            Shadow(
+                              offset: Offset(5.0, 5.0),
+                              blurRadius: 3.0,
+                              color: Color.fromARGB(47, 90, 83, 83),
+                            )
+                          ])),
+                ],
+              ),
+            ),
+            const Spacer(),
             //ボタン
-            new SizedBox(
+            SizedBox(
               width: 175,
               height: 75,
               child: ElevatedButton(
-                child: const Text('ログイン'),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                  onPrimary: Colors.white,
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.blue,
                   elevation: 16,
                 ),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Start()),
+                    MaterialPageRoute(
+                        builder: (context) => const Start()),
                   );
                 },
+                // child: const Text('ログイン'),
+                child: const Text('スタート'),
               ),
             ),
+            const Spacer(),
           ],
         ),
       ),

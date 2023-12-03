@@ -1,33 +1,34 @@
-import 'package:dining_dash/main.dart';
 import 'package:dining_dash/start.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatelessWidget {
+  const Settings({super.key});
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
+      appBar: AppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             //ボタン
-            new SizedBox(
+            SizedBox(
               width: 175,
               height: 75,
               child: ElevatedButton(
-                child: const Text('メインページ'),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                  onPrimary: Colors.white,
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.green,
                   elevation: 16,
                 ),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Start()),
+                    MaterialPageRoute(builder: (context) => const Start()),
                   );
                 },
+                child: const Text('メインページ'),
               ),
             ),
           ],

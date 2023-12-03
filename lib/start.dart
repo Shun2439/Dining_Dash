@@ -1,53 +1,57 @@
 import 'package:dining_dash/order.dart';
-import 'package:dining_dash/settings.dart';
 import 'package:flutter/material.dart';
 
 class Start extends StatelessWidget {
+  const Start({super.key});
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
+      appBar: AppBar(title: const Text('スタート')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             //ボタン
-            new SizedBox(
+            // const Spacer(),
+            // SizedBox(
+            //   width: 175,
+            //   height: 75,
+            //   child: ElevatedButton(
+            //     style: ElevatedButton.styleFrom(
+            //       foregroundColor: Colors.white,
+            //       backgroundColor: Colors.green,
+            //       elevation: 16,
+            //     ),
+            //     onPressed: () {
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(builder: (context) => const Settings()),
+            //       );
+            //     },
+            //     child: const Text('設定'),
+            //   ),
+            // ),
+            const Spacer(),
+            SizedBox(
               width: 175,
               height: 75,
               child: ElevatedButton(
-                child: const Text('設定'),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                  onPrimary: Colors.white,
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.blue,
                   elevation: 16,
                 ),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Settings()),
+                    MaterialPageRoute(builder: (context) => const Order()),
                   );
                 },
-              ),
-            ),
-            new SizedBox(
-              width: 175,
-              height: 75,
-              child: ElevatedButton(
                 child: const Text('注文'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                  onPrimary: Colors.white,
-                  elevation: 16,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Order()),
-                  );
-                },
               ),
             ),
+            const Spacer(),
           ],
         ),
       ),

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "924211090980",
+    "project_id": "dining-dash-90a09",
+    "storage_bucket": "dining-dash-90a09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924211090980:android:9e7858ecafc8edff692ab1",
+        "android_client_info": {
+          "package_name": "com.example.dining_dash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2qgq0vfEP4jAubH4iIuHc_Gv14AkFwFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
