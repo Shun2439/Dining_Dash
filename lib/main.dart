@@ -1,5 +1,5 @@
-import 'package:dining_dash/start.dart';
 import 'package:flutter/material.dart';
+import 'package:dining_dash/start.dart';
 
 void main() {
   runApp(const MyApp());
@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Start()),
+                        builder: (context) => const Start(title: 'スタート',)),
                   );
                 },
                 // child: const Text('ログイン'),

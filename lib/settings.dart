@@ -25,7 +25,7 @@ class Settings extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Start()),
+                    MaterialPageRoute(builder: (context) => const Start(title: 'スタート',)),
                   );
                 },
                 child: const Text('メインページ'),

@@ -1,9 +1,15 @@
 import 'package:dining_dash/order.dart';
 import 'package:flutter/material.dart';
 
-class Start extends StatelessWidget {
-  const Start({super.key});
+class Start extends StatefulWidget {
+  const Start({super.key, required this.title});
+  final String title;
 
+  @override
+  _StartPageState createState() => _StartPageState();
+}
+
+class _StartPageState extends State<Start> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +51,10 @@ class Start extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Order()),
+                    MaterialPageRoute(
+                        builder: (context) => const Order(
+                              title: 'オーダー',
+                            )),
                   );
                 },
                 child: const Text('注文'),
