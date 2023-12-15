@@ -30,7 +30,7 @@ class _OrderPageState extends State<Order> {
     });
   }
 
-  @override
+  @override //TODO クラスを切り分ける
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("オーダー")),
