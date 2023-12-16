@@ -62,54 +62,40 @@ class _OrderPageState extends State<Order> {
                   ),
                   const Spacer(),
                   //ボタン
-                  SizedBox(
-                    width: 325,
-                    height: 125,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
-                        elevation: 16,
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                          '${menu[1][0]}\n金額:${menu[1][1]}\n残り${menu[1][3]}'),
-                    ),
-                  ),
+                  _MenuButton(menu[1][0], menu[1][1], menu[1][3]),
                   const Spacer(),
-                  SizedBox(
-                    width: 325,
-                    height: 125,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
-                        elevation: 16,
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                          '${menu[2][0]}\n金額:${menu[2][1]}\n残り${menu[2][3]}'),
-                    ),
-                  ),
+                  _MenuButton(menu[2][0], menu[2][1], menu[2][3]),
                   const Spacer(),
-                  SizedBox(
-                    width: 325,
-                    height: 125,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.blue,
-                        elevation: 16,
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                          '${menu[3][0]}\n金額:${menu[3][1]}\n残り${menu[3][3]}'),
-                    ),
-                  ),
+                  _MenuButton(menu[3][0], menu[3][1], menu[3][3]),
                   const Spacer(),
                 ],
               ),
             ),
+    );
+  }
+}
+
+// ignore: must_be_immutable
+class _MenuButton extends StatelessWidget {
+  _MenuButton(this.menu, this.value, this.stock);
+  String menu;
+  int value;
+  int stock;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 325,
+      height: 125,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.blue,
+          elevation: 16,
+        ),
+        onPressed: () {},
+        child: Text('$menu\n金額:$value\n残り$stock'),
+      ),
     );
   }
 }
