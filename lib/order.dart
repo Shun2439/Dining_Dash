@@ -2,11 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:csv/csv.dart';
 import 'dart:async';
+import 'package:http/http.dart' as http;
 
 Future<List<List<dynamic>>> loadCsvData() async {
   final csvData = await rootBundle.loadString('assets/menu.csv');
   List<List<dynamic>> menu = const CsvToListConverter().convert(csvData);
   return menu;
+}
+
+void getData() async {
+  var response = await http.get('http://localhost:5432/data' as Uri);
+  if (response.statusCode == 200) {
+    print('Data: ${response.body}');
+  } else {
+    print('Failed to load data');
+  }
 }
 
 class Order extends StatefulWidget {
@@ -23,6 +33,7 @@ class _OrderPageState extends State<Order> {
   @override
   void initState() {
     super.initState();
+    getData();
     loadCsvData().then((loadedMenu) {
       setState(() {
         menu = loadedMenu;
@@ -99,3 +110,17 @@ class _MenuButton extends StatelessWidget {
     );
   }
 }
+
+/*
+うどん
+そば
+カレー
+カツカレー
+丼物
+らンチ
+各種大盛り
+デザート
+ライス
+からあげ
+ポテト
+*/
